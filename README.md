@@ -44,3 +44,10 @@ return smth3
 ```
 
 ✅ string으로 바로 쓰는 대신에 const variable로 선언해서 사용하기 -> 에러 발견 용이
+
+<br />
+
+## Redux Toolkit
+
+- 등장배경
+  - 기존 Redux -> 많은 양의 코드를 써야함(Action, Action Creator, Switch, Case, Return, Default 등)
