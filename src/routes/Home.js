@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { addToDo } from "../store";
+import { addToDo, deleteToDo } from "../store";
+import ToDo from "../components/ToDo";
 
 /* useSelector : getState와 같은 기능(store에서 정보를 가져옴)
 useDispatch : mapDispatchToProps 대체 */
@@ -27,7 +28,11 @@ const Home = () => {
         <input type="text" value={text} onChange={onChange} />
         <button>Add</button>
       </form>
-      <ul>{JSON.stringify(toDo)}</ul>
+      <ul>
+        {toDo.map((toDo) => (
+          <ToDo {...toDo} key={toDo.id} />
+        ))}
+      </ul>
     </>
   );
 };
