@@ -65,8 +65,7 @@
 // export default store;
 
 // 툴킷
-import { createStore } from "redux";
-import { createAction, createReducer } from "@reduxjs/toolkit";
+import { createAction, createReducer, configureStore } from "@reduxjs/toolkit";
 
 export const addToDo = createAction("ADD");
 export const deleteToDo = createAction("DELETE");
@@ -93,6 +92,7 @@ const reducer = createReducer([], {
     state.filter((toDo) => toDo.id !== action.payload),
 });
 
-const store = createStore(reducer);
+const store = configureStore({ reducer });
+// configureStore() : Reducer에서 반환된 새로운 state를 Store라는 객체로 정리해 관리하는 곳
 
 export default store;
