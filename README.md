@@ -51,3 +51,5 @@ return smth3
 
 - 등장배경
   - 기존 Redux -> 많은 양의 코드를 써야함(Action, Action Creator, Switch, Case, Return, Default 등)
+
+✅ createSlice : 초기 state, reducer 함수 객체, "slice 이름"을 받아 리듀서 및 state에 해당하는 action crator와 action type을 자동으로 생성하는 함수. 내부적으로는 createAction 및 createReducer를 사용하므로 Immer를 사용하여 "mutating" 불변 업데이트를 작성할 수도 있다.
